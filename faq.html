@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LankaVibes - FAQ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .navbar { background-color: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); padding: 1rem 0; }
+    .logo { color: var(--slate-900); }
+    .logo-icon { color: var(--emerald-600); }
+    .nav-link { color: var(--slate-600); }
+    .nav-link:hover, .nav-link.active { color: var(--emerald-600); }
+    .nav-link.active { border-bottom-color: var(--emerald-600); }
+    .menu-btn { color: var(--slate-900); }
+    .lang-selector { background: var(--slate-100); border-color: var(--slate-200); }
+    .lang-selector select { color: var(--slate-800); }
+    body { padding-top: 5rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Global Language Selector Front-Left -->
+  <div id="global-lang" class="global-lang-selector">
+    <i data-lucide="globe" class="icon-sm"></i>
+    <select id="lang-select-global" aria-label="Select Language">
+      <option value="en">EN</option>
+      <option value="fr">FR</option>
+      <option value="de">DE</option>
+    </select>
+  </div>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/94764362126" target="_blank" rel="noreferrer" id="floating-btn" aria-label="Book Now via WhatsApp">
+    <i data-lucide="message-circle"></i>
+  </a>
+
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" style="text-decoration:none;">
+        <i data-lucide="map-pin" class="logo-icon"></i>
+        <span>Lanka<span class="text-emerald">Vibes</span></span>
+      </a>
+
+      <div class="nav-links desktop-only">
+        <a href="index.html" class="nav-link" data-i18n="nav-home">Home</a>
+        <a href="destinations.html" class="nav-link" data-i18n="nav-dest">Destinations</a>
+        <a href="about.html" class="nav-link" data-i18n="nav-about">About</a>
+        <a href="faq.html" class="nav-link active" data-i18n="nav-faq">FAQ</a>
+        <a href="auth.html" class="nav-link" data-i18n="nav-auth">Sign In</a>
+        <a href="contact.html" class="btn btn-primary nav-cta" data-i18n="nav-cta">Plan Your Trip</a>
+      </div>
+
+      <div class="mobile-nav-cluster mobile-only">
+        <button id="mobile-menu-btn" class="menu-btn" aria-label="Toggle menu">
+          <i data-lucide="menu" id="menu-icon"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu hidden">
+    <div class="mobile-menu-content">
+      <a href="index.html" class="mobile-link" data-i18n="nav-home">Home</a>
+      <a href="destinations.html" class="mobile-link" data-i18n="nav-dest">Destinations</a>
+      <a href="about.html" class="mobile-link" data-i18n="nav-about">About</a>
+      <a href="faq.html" class="mobile-link" data-i18n="nav-faq">FAQ</a>
+      <a href="auth.html" class="mobile-link" data-i18n="nav-auth">Sign In</a>
+      <a href="contact.html" class="btn btn-primary mobile-cta" data-i18n="nav-cta">Plan Your Trip</a>
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="faq-section" style="padding-top:3rem;">
+    <div class="container">
+      <div class="section-header center mb-4">
+        <span class="section-label" data-i18n="faq-label">Got Questions?</span>
+        <h2 data-i18n="faq-title">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4 data-i18n="faq1-q">What is the best time to visit Sri Lanka?</h4>
+            <i data-lucide="chevron-down" class="faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p data-i18n="faq1-a">Sri Lanka is a year-round destination! The west and south coasts are best from December to March, while the east coast is ideal from April to September.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4 data-i18n="faq2-q">Do I need a visa?</h4>
+            <i data-lucide="chevron-down" class="faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p data-i18n="faq2-a">Yes, most nationalities need an ETA (Electronic Travel Authorization) which can be easily obtained online before your arrival.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4 data-i18n="faq3-q">Is it safe to travel in Sri Lanka?</h4>
+            <i data-lucide="chevron-down" class="faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p data-i18n="faq3-a">Absolutely. Sri Lanka is known for its warm hospitality and is considered a very safe destination for tourists, including solo travelers and families.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="text-decoration:none; margin-bottom: 1.5rem; display:inline-flex;">
+          <i data-lucide="map-pin" class="logo-icon"></i>
+          <span class="text-white">Lanka<span class="text-emerald">Vibes</span></span>
+        </a>
+        <p class="footer-desc" data-i18n="footer-desc">Your trusted partner for luxury and adventurous travel across the beautiful island of Sri Lanka.</p>
+      </div>
+      
+      <div class="footer-links">
+        <h4 data-i18n="footer-quick">Quick Links</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav-home">Home</a></li>
+          <li><a href="destinations.html" data-i18n="nav-dest">Destinations</a></li>
+          <li><a href="about.html" data-i18n="nav-about">About Us</a></li>
+          <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4 data-i18n="footer-contact-title">Contact Us</h4>
+        <ul>
+          <li><i data-lucide="message-circle" class="icon-emerald"></i> 076 436 2126</li>
+          <li><i data-lucide="mail" class="icon-emerald"></i> chamalkajanu@gmail.com</li>
+          <li><i data-lucide="map-pin" class="icon-emerald"></i> <span data-i18n="footer-address">Colombo, Sri Lanka</span></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="footer-bottom">
+        &copy; <span id="year"></span> LankaVibes Tourism. <span data-i18n="footer-rights">All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+  <script src="script.js"></script>
+</body>
+</html>
